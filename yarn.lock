@@ -10580,11 +10580,6 @@ shellwords@^0.1.1:
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
-shorthandcss@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/shorthandcss/-/shorthandcss-1.1.1.tgz#323df4e15ffc54e7bf27a6643d9c1107b924c9f1"
-  integrity sha512-xmQGhivA4U5kjLpEBnJ+j7ezHBaugHpmgmPQ+0Pa2RM3J4F5AOEYXPxSJ0vaemyx41LKzNWk6rx0zEoCLQIpfw==
-
 side-channel@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.2.tgz#df5d1abadb4e4bf4af1cd8852bf132d2f7876947"

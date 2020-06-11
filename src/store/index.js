@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import listReducer from '../slices/list/listSlice';
+import currentReducer from '../slices/current/currentSlice';
+import homeSlice from '../slices/home/homeSlice';
 
 const store = configureStore({
   reducer: {
-    list: listReducer,
+    current: currentReducer,
+    home: homeSlice,
   },
 });
 

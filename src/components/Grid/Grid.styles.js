@@ -1,16 +1,12 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-const global = createGlobalStyle`
-  body{
-    background: red;
-  }
-`;
+import styled from 'styled-components';
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 33.33vh;
+  grid-auto-rows: calc(33.333vh - 5px);
   grid-gap: 8px;
+  background-color: #02305d;
+  color: #8a8abf;
 `;
 
 const GridItem = styled.div`
@@ -19,20 +15,26 @@ const GridItem = styled.div`
   position: relative;
   font-family: 'Roboto', sans-serif;
   h1{
+    font-size: ${props => {
+    const title = props.title.split('');
+    const titleTooLong = title.includes(' ') || title.length > 10;
+    return titleTooLong ? '1.2rem' : '2rem';
+  }};
+    text-align: center;
     font-weight: bold;
-    /* width: fit-content; */
-    -webkit-text-stroke: 0.01px white;
-    font-size: 1.5rem;
     font-family: 'Patua One', cursive;
-    /* background: linear-gradient(0deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.65) 50%, rgba(255,255,255,0) 60%); */
-  }
-  img,h1{
+    background-color: white;
+    color: black;
     position: absolute; 
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: 100%;
+    transform: translate(-50%,-100%);
   }
   img{
+    position: absolute; 
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-35%);
     background-color: ${props => props.colors[0]};
     color: ${props => props.colors[1]};
     height: 70%;
@@ -41,4 +43,4 @@ const GridItem = styled.div`
   }
 `;
 
-export { Grid, GridItem, global };
+export { Grid, GridItem };

@@ -1,11 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes, { object } from 'prop-types';
 import * as S from './Grid.styles';
 import GridItem from './GridItem';
-import { selectCategories } from '../../slices/list/listSlice';
 
-const Grid = () => {
-  const categories = useSelector(selectCategories);
+const Grid = ({ items, url }) => {
   const gridStyles = [
     'pattern-checks-md',
     'pattern-diagonal-lines-md',
@@ -36,20 +34,30 @@ const Grid = () => {
   const randomStyle = () => gridStyles[Math.floor(Math.random() * gridStyles.length)];
 
   return (
-    <S.Grid className="pattern-dots-xl bg-blue-darkest blue">
-      {categories.map(
-        category => (
+    <S.Grid className="pattern-dots-xl">
+      {items.map(
+        item => (
           <GridItem
-            title={category.name}
-            background={category.image}
-            key={category.name}
+            title={item.name}
+            background={item.image}
+            key={item.name}
             pattern={randomStyle()}
             colors={randomColors()}
+            url={url}
           />
         ),
       )}
     </S.Grid>
   );
+};
+
+Grid.defaultProps = {
+  url: '',
+};
+
+Grid.propTypes = {
+  items: PropTypes.arrayOf(object).isRequired,
+  url: PropTypes.string,
 };
 
 export default Grid;

@@ -1,12 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const listSlice = createSlice({
-  name: 'list',
+const homeSlice = createSlice({
+  name: 'home',
   initialState: {
-    current: [],
     categories: [
       {
-        name: 'Fishes',
+        name: 'Fish',
         image: `http://acnhapi.com/v1/icons/fish/${Math.floor(Math.random() * 80)}`,
       },
       {
@@ -36,7 +35,6 @@ const listSlice = createSlice({
   },
 });
 
-export const selectList = state => state.list.current;
-export const selectCategories = state => state.list.categories;
+export const selectCategories = state => state.home.categories;
 
-export default listSlice.reducer;
+export default homeSlice.reducer;
