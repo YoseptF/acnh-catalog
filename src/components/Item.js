@@ -37,6 +37,37 @@ const Item = () => {
                   </>
                 );
               }
+              case 'availability':
+                return (
+                  <>
+                    {Object.entries(value).map(([key, value]) => {
+                      const unSluggedKey = key.replace(/-|_/g, ' ');
+                      switch (key) {
+                        case 'isAllDay':
+                        case 'isAllYear':
+                          return (
+                            <>
+                              <li key={key} className="title">{unSluggedKey}</li>
+                              <li key={value} className="value">{value.toString()}</li>
+                            </>
+                          );
+                        case 'month-array-northern':
+                        case 'month-array-southern':
+                          return '';
+
+                        default:
+                          return (
+                            <>
+                              <li className="title">{unSluggedKey}</li>
+                              <li className={`value ${value.split('').lenght > 15 ? 'long' : ''}`}>
+                                {value}
+                              </li>
+                            </>
+                          );
+                      }
+                    })}
+                  </>
+                );
               case 'catch-translations':
                 return (
                   <>
@@ -44,7 +75,18 @@ const Item = () => {
                     <li className="value">{value[`catch-${language}`]}</li>
                   </>
                 );
+              case 'isOrderable':
+                return (
+                  <>
+                    <li key={key} className="title">{unSluggedKey}</li>
+                    <li key={value} className="value">{value.toString()}</li>
+                  </>
+                );
               case 'price':
+              case 'sell-price':
+              case 'price-flick':
+              case 'price-cj':
+              case 'buy-price':
                 return (
                   <>
                     <li className="title">{unSluggedKey}</li>
@@ -58,7 +100,9 @@ const Item = () => {
                 return (
                   <>
                     <li className="title">{unSluggedKey}</li>
-                    <li className={`value ${value.split('').lenght > 15 ? 'long' : ''}`}>{`${value}`}</li>
+                    <li className={`value ${value.split('').length > 15 ? 'long' : ''}`}>
+                      {value}
+                    </li>
                   </>
                 );
               }

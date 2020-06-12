@@ -41,7 +41,7 @@ const Item = styled.div`
     text-transform: capitalize;
     font-family: 'Roboto', cursive;
     background: #6464d2;
-    &.large{
+    &.long{
       text-align: justify;
       padding: 2rem;
     }
