@@ -1,15 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto|Patua+One');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto|Patua+One");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background: hsla(237,64%,49%,0.7);
+body {
+  background: hsla(237, 64%, 49%, 0.7);
 }
 
-#root{
+#root {
   max-width: 800px;
   margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(237, 64%, 49%, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 98, 204, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
