@@ -15,11 +15,6 @@ const GridItem = styled.div`
   position: relative;
   font-family: 'Roboto', sans-serif;
   h1{
-    font-size: ${props => {
-    const title = props.title.split('');
-    const titleTooLong = title.includes(' ') || title.length > 10;
-    return titleTooLong ? '1.2rem' : '2rem';
-  }};
     text-align: center;
     font-weight: bold;
     font-family: 'Patua One', cursive;
@@ -29,8 +24,14 @@ const GridItem = styled.div`
     left: 50%;
     top: 100%;
     transform: translate(-50%,-100%);
+    font-size: ${props => {
+    const title = props.title.split('');
+    const titleTooLong = title.includes(' ') || title.length > 10;
+    return titleTooLong ? '1.2rem' : '2rem';
+  }};
   }
   img{
+    
     position: absolute; 
     left: 50%;
     top: 35%;
