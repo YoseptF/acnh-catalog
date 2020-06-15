@@ -6,34 +6,34 @@ const homeSlice = createSlice({
     categories: [
       {
         name: 'Fish',
-        image: `http://acnhapi.com/v1/icons/fish/${(Math.floor(Math.random() * 79) + 1)}`,
+        image: `https://acnhapi.com/v1/icons/fish/${(Math.floor(Math.random() * 79) + 1)}`,
       },
       {
         name: 'Bugs',
-        image: `http://acnhapi.com/v1/icons/bugs/${(Math.floor(Math.random() * 79) + 1)}`,
+        image: `https://acnhapi.com/v1/icons/bugs/${(Math.floor(Math.random() * 79) + 1)}`,
       },
       {
         name: 'Fossils',
-        image: 'http://acnhapi.com/v1/images/fossils/amber',
+        image: 'https://acnhapi.com/v1/images/fossils/amber',
       },
       {
         name: 'Villagers',
-        image: `http://acnhapi.com/v1/images/villagers/${(Math.floor(Math.random() * 390) + 1)}`,
+        image: `https://acnhapi.com/v1/images/villagers/${(Math.floor(Math.random() * 390) + 1)}`,
       },
       {
         name: 'Songs',
-        image: `http://acnhapi.com/v1/images/songs/${(Math.floor(Math.random() * 94) + 1)}`,
+        image: `https://acnhapi.com/v1/images/songs/${(Math.floor(Math.random() * 94) + 1)}`,
       },
       {
         name: 'Credits',
-        image: 'http://acnhapi.com/v1/images/furniture/FtrCorkboard_Remake_2_2',
+        image: 'https://acnhapi.com/v1/images/furniture/FtrCorkboard_Remake_2_2',
       },
     ],
     credits: [
       {
         name: 'Api',
-        image: 'http://images1.wikia.nocookie.net/__cb20100421222855/ssb/images/e/e9/AnimalCrossingSymbol.svg',
-        external: 'http://acnhapi.com/',
+        image: 'https://images1.wikia.nocookie.net/__cb20100421222855/ssb/images/e/e9/AnimalCrossingSymbol.svg',
+        external: 'https://acnhapi.com/',
       },
       {
         name: 'Code',
