@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes, { object } from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import * as S from './Grid.styles';
 import GridItem from './GridItem';
+import { selectFilters, updateFilter } from '../../slices/current/currentSlice';
 
 const Grid = ({ items, url }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(updateFilter({ name: '' }));
+  }, [dispatch]);
   const gridStyles = [
     'pattern-checks-md',
     'pattern-diagonal-lines-md',
@@ -20,6 +26,7 @@ const Grid = ({ items, url }) => {
   ];
 
   const colors = [
+    ['#efb200', '#ffe1d0'],
     ['#4a5aef', '#94a2ff'],
     ['#1e4c21', '#5acaff'],
     ['#7bc2f7', '#e3e4f7'],
@@ -30,12 +37,15 @@ const Grid = ({ items, url }) => {
     ['#983619', '#954524'],
   ];
 
+  const currentFilter = useSelector(selectFilters);
+
   const randomColors = () => colors[Math.floor(Math.random() * colors.length)];
   const randomStyle = () => gridStyles[Math.floor(Math.random() * gridStyles.length)];
 
+
   return (
     <S.Grid className="pattern-dots-xl">
-      {items.map(
+      {items.filter(item => item.name.toLowerCase().includes(currentFilter.name.toLowerCase())).map(
         item => (
           <GridItem
             title={item.name}
@@ -44,6 +54,7 @@ const Grid = ({ items, url }) => {
             pattern={randomStyle()}
             colors={randomColors()}
             url={url}
+            external={item.external}
           />
         ),
       )}

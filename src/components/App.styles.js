@@ -9,11 +9,27 @@ position: sticky;
 top:0;
 z-index: 100;
 padding: 0 20px;
-/* transition: all 100ms ease-in-out; */
+width: 100%;
+input{
+  margin-left: 24px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.5rem;
+  max-width: 250px;
+  &:focus{
+    outline: none;
+  }
+  &::placeholder{
+    color: white;
+  }
+}
 a{
   img{
   height: 32px;
 }
+
 }
 &.hidden{
   top: -100px;
@@ -21,13 +37,13 @@ a{
 `;
 
 const Loader = styled.div`
-  width:100vw;
+  width:100%;
   height: 100vh;
-  position:fixed;
-  background: ${`hsla(${360 * Math.random()},70%,50%,0.8)`};
-  z-index: 100;
+  max-width: 800px;
+  position:absolute;
+  background: ${`hsla(${360 * Math.random()}, 70%, 50%, 1)`};
+  z-index: 101;
   visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
-  position: relative;
   h1{
     position: absolute;
     left: 50%;
@@ -56,4 +72,7 @@ const Loader = styled.div`
 }
 `;
 
-export { Filter, Loader };
+const Credits = styled.div`
+`;
+
+export { Filter, Loader, Credits };

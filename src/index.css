@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+body{
+  background: hsla(237,64%,49%,0.7);
+}
+
 #root{
-  /* overflow-x: hidden; */
+  max-width: 800px;
+  margin: 0 auto;
 }

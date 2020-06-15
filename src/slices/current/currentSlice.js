@@ -4,17 +4,13 @@ import { createSlice } from '@reduxjs/toolkit';
 const currentSlice = createSlice({
   name: 'current',
   initialState: {
+    filters: {
+      name: '',
+    },
     loading: true,
     info: {},
     items: [],
     language: 'USen',
-    fields: {
-      villagers: ['name', 'birthday', 'species', 'gender', 'catch-frase', 'image', 'personality'],
-      bugs: ['name', 'aviability', 'price', 'price-flick', 'catch-frase', 'museum-frase', 'image'],
-      fish: ['name', 'aviability', 'shadow', 'price', 'price-cj', 'catch-phrase', 'museum-phrase', 'image'],
-      fossils: ['name', 'price', 'museum-phrase', 'image'],
-      songs: ['name', 'buy-price', 'sell-price', 'Music', 'orderable', 'museum-phrase', 'image'],
-    },
   },
   reducers: {
     updateInfo: (state, action) => {
@@ -23,15 +19,19 @@ const currentSlice = createSlice({
     },
     startLoading: state => { state.loading = false; },
     finishLoading: state => { state.loading = true; },
+    updateFilter: (state, action) => { state.filters = action.payload; },
   },
 });
 
-export const { updateInfo, startLoading, finishLoading } = currentSlice.actions;
+export const {
+  updateInfo, startLoading, finishLoading, updateFilter,
+} = currentSlice.actions;
 
 export const selectInfo = state => state.current.info;
 export const selectItems = state => state.current.items;
 export const selectLanguage = state => state.current.language;
 export const selectLoading = state => state.current.loading;
+export const selectFilters = state => state.current.filters;
 
 export const updateFromApi = (type, language) => async dispatch => {
   dispatch(startLoading());

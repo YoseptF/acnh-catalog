@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 const Item = styled.div`
   .featured{
-    width: 100vw;
+    width: 100%;
   }
   h1{
     text-align: center;
-    color: black;
+    color: white;
+    font-family: 'Patua One', cursive;
     text-transform: capitalize;
   }
 `;
@@ -16,6 +17,7 @@ const Attribute = styled.div`
     min-height: 7vh;
     color: white;
     text-align: center;
+    list-style: none;
   }
   .title{
     font-size: 1.5rem;

@@ -7,6 +7,7 @@ const Grid = styled.div`
   grid-gap: 8px;
   background-color: #02305d;
   color: #8a8abf;
+  min-height:100vh;
 `;
 
 const GridItem = styled.div`
