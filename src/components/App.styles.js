@@ -20,4 +20,40 @@ a{
 }
 `;
 
-export { Filter };
+const Loader = styled.div`
+  width:100vw;
+  height: 100vh;
+  position:fixed;
+  background: ${`hsla(${360 * Math.random()},70%,50%,0.8)`};
+  z-index: 100;
+  visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
+  position: relative;
+  h1{
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,-75%);
+    font-family: 'Patua One', cursive;
+    background-color: white;
+    color: black;
+  }
+  img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: jumping 500ms ease-in-out 0s infinite normal none;
+  }
+  @keyframes jumping {
+    0%{
+        transform: translate(-50%,-50%);
+    }
+    50%{
+        transform: translate(-50%,-40%);
+    }
+    100%{
+        transform: translate(-50%,-50%);
+    }
+}
+`;
+
+export { Filter, Loader };

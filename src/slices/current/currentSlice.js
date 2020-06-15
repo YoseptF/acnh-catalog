@@ -4,6 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const currentSlice = createSlice({
   name: 'current',
   initialState: {
+    loading: true,
     info: {},
     items: [],
     language: 'USen',
@@ -20,16 +21,20 @@ const currentSlice = createSlice({
       state.items = action.payload.items;
       state.info = action.payload.info;
     },
+    startLoading: state => { state.loading = false; },
+    finishLoading: state => { state.loading = true; },
   },
 });
 
-export const { updateInfo } = currentSlice.actions;
+export const { updateInfo, startLoading, finishLoading } = currentSlice.actions;
 
 export const selectInfo = state => state.current.info;
 export const selectItems = state => state.current.items;
 export const selectLanguage = state => state.current.language;
+export const selectLoading = state => state.current.loading;
 
 export const updateFromApi = (type, language) => async dispatch => {
+  dispatch(startLoading());
   const response = await fetch(`https://acnhapi.com/v1/${type}/`);
   const info = await response.json();
   const imagetype = type === 'fish' ? 'icon' : 'image';
@@ -44,6 +49,7 @@ export const updateFromApi = (type, language) => async dispatch => {
   );
 
   dispatch(updateInfo({ items, info }));
+  dispatch(finishLoading());
 };
 
 export default currentSlice.reducer;
