@@ -8,10 +8,8 @@ import Loader from './Loader';
 import { selectLoading } from '../slices/current/currentSlice';
 import Credits from './Credits';
 
-
 const Routes = () => {
   const loading = useSelector(selectLoading);
-
 
   return (
     <Router>

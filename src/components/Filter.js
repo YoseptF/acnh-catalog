@@ -26,7 +26,6 @@ const Filter = ({ searchbar }) => {
     dispatch(updateFilter({ ...filter, name: e.target.value }));
   };
 
-
   return (
     <S.Filter className={visible ? '' : 'hidden'}>
       <Link to={`/${item ? category : ''}`}>

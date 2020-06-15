@@ -42,7 +42,6 @@ const Grid = ({ items, url }) => {
   const randomColors = () => colors[Math.floor(Math.random() * colors.length)];
   const randomStyle = () => gridStyles[Math.floor(Math.random() * gridStyles.length)];
 
-
   return (
     <S.Grid className="pattern-dots-xl">
       {items.filter(item => item.name.toLowerCase().includes(currentFilter.name.toLowerCase())).map(
