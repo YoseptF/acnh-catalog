@@ -7,17 +7,17 @@ import 'pattern.css';
 const GridItem = ({
   title, background, pattern, colors, url, external,
 }) => (
-  <S.GridItem colors={colors} title={title}>
+  <S.GridItem data-testid="category" colors={colors} title={title}>
     {external
     && (
-    <a href={external} target="_blank" rel="noreferrer">
+    <a data-testid="externalLink" href={external} target="_blank" rel="noopener noreferrer">
       <img loading="lazy" src={background} alt={title} className={`${pattern}`} />
       <h1 className="pattern-dots-sm text-pattern">{title}</h1>
     </a>
     )}
     {!external
     && (
-      <Link to={`${url}/${title}`}>
+      <Link data-testid={`internalLink${title}`} to={`${url}/${title}`}>
         <img loading="lazy" src={background} alt={title} className={`${pattern}`} />
         <h1 className="pattern-dots-sm text-pattern">{title}</h1>
       </Link>
@@ -26,11 +26,11 @@ const GridItem = ({
 );
 
 GridItem.defaultProps = {
-  external: false,
+  external: '',
 };
 
 GridItem.propTypes = {
-  external: PropType.bool,
+  external: PropType.string,
   title: PropType.string.isRequired,
   url: PropType.string.isRequired,
   background: PropType.string.isRequired,

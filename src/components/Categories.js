@@ -8,7 +8,6 @@ import {
 import Filter from './Filter';
 
 const Categories = () => {
-  window.scrollTo(0, 0);
   const { category } = useParams();
   const dispatch = useDispatch();
   const language = useSelector(selectLanguage);

@@ -37,8 +37,12 @@ const Filter = ({ searchbar }) => {
   );
 };
 
+Filter.defaultProps = {
+  searchbar: false,
+};
+
 Filter.propTypes = {
-  searchbar: PropTypes.bool.isRequired,
+  searchbar: PropTypes.bool,
 };
 
 export default Filter;

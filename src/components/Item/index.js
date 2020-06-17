@@ -15,17 +15,15 @@ const Item = () => {
 
   useEffect(() => {
     if (!Object.keys(dataArray).length) dispatch(updateFromApi(category.toLowerCase(), language));
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, [category, dispatch, dataArray, language]);
 
   const currentData = Object.values(dataArray).filter(data => data.name[`name-${language}`] === item)[0];
-
   return (
     <S.Item>
       <Filter />
       {
         currentData
-        && (typeof currentData !== 'number')
         && (
         <>
           <Title image={currentData.image_uri} item={item} />

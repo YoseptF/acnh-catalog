@@ -89,14 +89,13 @@ const attributeSwitcher = (id, value, language) => {
 
 const Attributes = ({ currentData, language }) => (
   <ul>
-    {
-       Object.entries(currentData)
+    { currentData
+       && Object.entries(currentData)
          .map(([id, value]) => (
            <S.Attribute key={uid()}>
              {attributeSwitcher(id, value, language)}
            </S.Attribute>
-         ))
-      }
+         ))}
   </ul>
 );
 

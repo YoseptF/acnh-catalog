@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Title = ({ image, item }) => (
   <>
-    <img className="featured" src={image} alt={item} />
+    <img data-testid={`title-${item}`} className="featured" src={image} alt={item} />
     <h1>{item}</h1>
   </>
 );
