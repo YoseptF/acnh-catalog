@@ -10,6 +10,36 @@ top:0;
 z-index: 100;
 padding: 0 20px;
 width: 100%;
+.selectFilter{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  label{
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: Roboto;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  select{
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: white;
+    padding: 8px;
+    option{
+      cursor: pointer;
+    }
+    &:hover{
+      background: #487fa2;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+}
 input{
   margin-left: 24px;
   background: none;

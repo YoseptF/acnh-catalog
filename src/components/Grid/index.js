@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import PropTypes, { object } from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import * as S from './Grid.styles';
 import GridItem from './GridItem';
 import { selectFilters, updateFilter } from '../../slices/current/currentSlice';
 
 const Grid = ({ items, url }) => {
+  const { category } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(updateFilter({ name: '' }));
-  }, [dispatch]);
+    dispatch(updateFilter({ name: '', selectFilter: { type: category, state: 'All' } }));
+  }, [dispatch, category]);
   const gridStyles = [
     'pattern-checks-md',
     'pattern-diagonal-lines-md',
@@ -44,7 +46,11 @@ const Grid = ({ items, url }) => {
 
   return (
     <S.Grid className="pattern-dots-xl">
-      {items.filter(item => item.name.toLowerCase().includes(currentFilter.name.toLowerCase())).map(
+      {items.filter(item => {
+        const searchFilter = item.name.toLowerCase().includes(currentFilter.name.toLowerCase());
+        const selectFilter = `${item[currentFilter.selectFilter.type]}` === currentFilter.selectFilter.state || currentFilter.selectFilter.state === 'All';
+        return searchFilter && selectFilter;
+      }).map(
         item => (
           <GridItem
             title={item.name}

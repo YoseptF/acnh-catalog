@@ -6,6 +6,10 @@ const currentSlice = createSlice({
   initialState: {
     filters: {
       name: '',
+      selectFilter: {
+        type: '',
+        state: 'All',
+      },
     },
     loading: true,
     info: {},
@@ -44,6 +48,8 @@ export const updateFromApi = (type, language) => async dispatch => {
       {
         name: item.name[`name-${language}`],
         image: item[`${imagetype}_uri`],
+        personality: item.personality,
+        price: item.price,
       }
     ),
   );

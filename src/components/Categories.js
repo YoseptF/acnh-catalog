@@ -19,9 +19,25 @@ const Categories = () => {
 
   const currentItems = useSelector(selectItems);
 
+  let navFilter;
+
+  switch (category) {
+    case 'Villagers':
+      navFilter = 'personality';
+      break;
+    case 'Fish':
+    case 'Bugs':
+    case 'Fossils':
+      navFilter = 'price';
+      break;
+
+    default:
+      break;
+  }
+
   return (
     <>
-      <Filter currentItems={currentItems} searchbar />
+      <Filter currentItems={currentItems} searchbar selectFilter={navFilter} />
       <Grid items={currentItems} url={url} />
     </>
   );
