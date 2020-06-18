@@ -1,7 +1,7 @@
 import React from 'react';
 import PropType, { string } from 'prop-types';
 import { Link } from 'react-router-dom';
-import * as S from '../Presentational/Grid.styles';
+import * as S from './Grid.styles';
 import 'pattern.css';
 
 const GridItem = ({

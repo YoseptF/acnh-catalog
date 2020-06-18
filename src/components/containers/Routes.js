@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import HomePage from './HomePage';
 import Categories from './Categories';
 import Item from './Item';
-import Loader from './Loader';
-import { selectLoading } from '../slices/current/currentSlice';
+import Loader from '../presentationals/Loader';
+import { selectLoading } from '../../slices/current/currentSlice';
 import Credits from './Credits';
 
 const Routes = () => {

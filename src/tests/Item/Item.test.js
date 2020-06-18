@@ -7,7 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { createMemoryHistory } from 'history';
 import { Provider } from 'react-redux';
 import store from '../../store';
-import Item from '../../components/Item';
+import Item from '../../components/containers/Item';
 import '../globals';
 
 const renderOnPath = (path, route) => {

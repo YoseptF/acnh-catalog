@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import Title from '../../components/Item/Title';
+import Title from '../../components/presentationals/Title';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('<Title />', () => {

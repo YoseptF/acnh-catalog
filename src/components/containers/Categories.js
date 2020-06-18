@@ -4,7 +4,7 @@ import { useParams, useRouteMatch } from 'react-router-dom';
 import Grid from './Grid';
 import {
   updateFromApi, selectLanguage, selectItems,
-} from '../slices/current/currentSlice';
+} from '../../slices/current/currentSlice';
 import Filter from './Filter';
 
 const Categories = () => {
@@ -15,7 +15,7 @@ const Categories = () => {
 
   useEffect(() => {
     dispatch(updateFromApi(category.toLowerCase(), language));
-  }, [category, language, dispatch]);
+  }, []); // eslint-disable-line
 
   const currentItems = useSelector(selectItems);
 

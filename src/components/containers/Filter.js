@@ -3,9 +3,9 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import uid from 'uid';
-import * as S from './Presentational/App.styles';
-import back from '../images/back.svg';
-import { updateFilter, selectFilters, selectInfo } from '../slices/current/currentSlice';
+import * as S from '../presentationals/App.styles';
+import back from '../../images/back.svg';
+import { updateFilter, selectFilters, selectInfo } from '../../slices/current/currentSlice';
 
 const Filter = ({ searchbar, selectFilter }) => {
   const [scroll, setScroll] = useState(0);
@@ -25,7 +25,7 @@ const Filter = ({ searchbar, selectFilter }) => {
       setScroll(window.scrollY);
       setVisible(scrollCheck);
     });
-  }, [dispatch, selectFilter]); // eslint-disable-line
+  }, []); // eslint-disable-line
 
   const updateReduxFilter = e => {
     dispatch(updateFilter({ ...filter, name: e.target.value }));

@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
-import GridItem from '../../components/Grid/GridItem';
+import GridItem from '../../components/presentationals/GridItem';
 import store from '../../store';
 import '@testing-library/jest-dom/extend-expect';
 

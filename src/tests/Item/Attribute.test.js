@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import Attributes from '../../components/Item/Attributes';
+import Attributes from '../../components/presentationals/Attributes';
 import '@testing-library/jest-dom/extend-expect';
 
 // beforeAll(cleanup);

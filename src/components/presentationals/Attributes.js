@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
-import * as S from '../Presentational/Item.styles';
+import * as S from './Item.styles';
 
 const attributeSwitcher = (id, value, language) => {
   const unSluggedId = id.replace(/-|_/g, ' ');
@@ -23,7 +23,7 @@ const attributeSwitcher = (id, value, language) => {
               case 'isAllDay':
               case 'isAllYear':
                 return (
-                  <S.Attribute>
+                  <S.Attribute key={uid()}>
                     <li key={id} className="title">{unSluggedId}</li>
                     <li key={value} className="value">{value.toString()}</li>
                   </S.Attribute>
@@ -34,7 +34,7 @@ const attributeSwitcher = (id, value, language) => {
 
               default:
                 return (
-                  <S.Attribute>
+                  <S.Attribute key={uid()}>
                     <li key={id} className="title">{unSluggedId}</li>
                     <li key={value} className={`value ${value.split('').lenght > 15 ? 'long' : ''}`}>
                       {value}
