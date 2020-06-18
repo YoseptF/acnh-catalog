@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uid from 'uid';
-import * as S from './Item.styles';
+import * as S from '../Presentational/Item.styles';
 
 const attributeSwitcher = (id, value, language) => {
   const unSluggedId = id.replace(/-|_/g, ' ');

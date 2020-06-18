@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes, { object } from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import * as S from './Grid.styles';
+import * as S from '../Presentational/Grid.styles';
 import GridItem from './GridItem';
 import { selectFilters, updateFilter } from '../../slices/current/currentSlice';
 

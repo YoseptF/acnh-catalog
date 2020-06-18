@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Filter from '../Filter';
 import { selectInfo, updateFromApi, selectLanguage } from '../../slices/current/currentSlice';
-import * as S from './Item.styles';
+import * as S from '../Presentational/Item.styles';
 import Attributes from './Attributes';
 import Title from './Title';
 

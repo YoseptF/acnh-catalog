@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import * as S from './App.styles';
+import * as S from './Presentational/App.styles';
 import Filter from './Filter';
 import Grid from './Grid';
 import { selectCredits } from '../slices/home/homeSlice';

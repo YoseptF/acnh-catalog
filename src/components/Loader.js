@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as S from './App.styles';
+import * as S from './Presentational/App.styles';
 import logo from '../images/logo.svg';
 
 const Loader = ({ hidden }) => (

@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import uid from 'uid';
-import * as S from './App.styles';
+import * as S from './Presentational/App.styles';
 import back from '../images/back.svg';
 import { updateFilter, selectFilters, selectInfo } from '../slices/current/currentSlice';
 
