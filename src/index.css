@@ -1,13 +1,32 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto|Patua+One");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: hsla(237, 64%, 49%, 0.7);
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(237, 64%, 49%, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 98, 204, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

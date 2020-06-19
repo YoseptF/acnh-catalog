@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# <img src="./src/images/logo.svg" width=10%> Animal Crossing | Catalog
 
-## Available Scripts
+## Explore the Animal Crossing world from your phone
 
-In the project directory, you can run:
+![topImage](https://i.imgur.com/xGeg4su.png)
 
-### `yarn start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Animal crossing is one of my favorite games, and New horizons it's been a real helper with these tiomes we live in right now, so when the oportunity came to make a catalog as a project capstone, I didn't even hesitate.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The App can be installed through chrome an any platform (I think), or viewed from any webbrowser (except <IE8, but please stop using that)
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Try it out!!
 
-### `yarn build`
+You want to try it out without any installation? YOU CAN! Just check out the [live version](https://acnh-catalog.herokuapp.com/).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+While the catalog __can__ be viewed on a pc, it was thought to be viewed on a phone, the media queries are gonna try their best to make It look good on a pc... it just looks better on a phone.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Development Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project uses [Yarn 1.22.4](https://classic.yarnpkg.com/en/), and have not been tested with npm, it should work, but I can't say for sure.
 
-### `yarn eject`
+Steps: 
+- Clone this repo:
+```
+$ git clone git@github.com:YoseptF/acnh-catalog.git
+```
+- Move to the lastest branch:
+```
+$ git checkout [branch name]
+```
+- Install the dependencies:
+```
+$ yarn
+```
+- Run the developer server:
+```
+$ yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Build with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React](https://phaser.io/phaser3)
+- [React redux](https://github.com/crgeary/phaser3-webpack-boilerplate) from [Christopher Geary](https://github.com/crgeary)
+- [@redux/Toolkit](http://www.limasky.com/)
+- [Patter.css](https://webpack.js.org/)
+- [acnhapi](https://acnhapi.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Coded by
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+🧔 Joseph Flores
+- Github: [@yoseptf](https://github.com/yoseptf)
+- Twitter: [@yosept__](https://twitter.com/yosept__)
+- Linkedin: [Joseph Flores](https://www.linkedin.com/in/joseph-flores-vega/)
