@@ -36,7 +36,13 @@ const attributeSwitcher = (id, value, language) => {
                 return (
                   <S.Attribute key={uid()}>
                     <li key={id} className="title">{unSluggedId}</li>
-                    <li key={value} className={`value ${value.split('').lenght > 15 ? 'long' : ''}`}>
+                    <li
+                      key={value}
+                      className={`value ${value
+                        .toString()
+                        .split('')
+                        .lenght > 15 ? 'long' : ''}`}
+                    >
                       {value}
                     </li>
                   </S.Attribute>
@@ -90,12 +96,12 @@ const attributeSwitcher = (id, value, language) => {
 const Attributes = ({ currentData, language }) => (
   <ul>
     { currentData
-       && Object.entries(currentData)
-         .map(([id, value]) => (
-           <S.Attribute key={uid()}>
-             {attributeSwitcher(id, value, language)}
-           </S.Attribute>
-         ))}
+      && Object.entries(currentData)
+        .map(([id, value]) => (
+          <S.Attribute key={uid()}>
+            {attributeSwitcher(id, value, language)}
+          </S.Attribute>
+        ))}
   </ul>
 );
 
